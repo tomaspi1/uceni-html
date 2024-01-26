@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            background-color: grey;
+            font-size: 30px;
+            font-family: Arial;
+        }
+        header {
+            background-color: black;
+        }
+        header a {
+            color: white;
+        }
+        header a:hover {
+            color: orange;
+        }
+        header {
+            display: grid;
+            padding: 0 20px;
+            grid-template-rows: min-content min-content;
+            grid-template-columns: 1fr min-content;
+            grid-template-areas:
+                "logo uzivatel"
+                "navigace navigace";
+        }
+
+        header .logo, header .uzivatel {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        header .logo {
+            grid-area: logo;
+        }
+        header .uzivatel {
+            grid-area: uzivatel;
+            font-size: 0.7rem;
+        }
+        header .uzivatel .jmeno {
+            display: none;
+        }
+
+        header nav {
+            grid-area: navigace;
+            display: flex;
+            font-size: 0.7rem;
+            justify-content: center;
+        }
+        header nav ul {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            gap: 15px;
+        }
+        header nav ul li {
+            border-top: 1px solid transparent;
+            list-style: none;
+            display: flex;
+        }
+        header nav ul li:hover {
+            border-top: 1px solid white;
+        }
+        header nav ul li a {
+            display: flex;
+            align-items: center;
+        }
+
+        @media (min-width: 700px) {
+            header {
+                grid-template-rows: min-content;
+                grid-template-columns: min-content 1fr min-content;
+                grid-template-areas:
+                    "logo navigace uzivatel"
+                    ;
+            }
+            header nav ul {
+                flex-direction: row;
+            }
+            header .uzivatel .jmeno {
+                display: inline;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#"><img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/star-256.png" alt="" height="64"></a>
+            <a href="#">PrimaWeb</a>
+        </div>
+
+
+        <nav>
+            <ul>
+                <li><a href="#">Lorem</a></li>
+                <li><a href="#">Laboriosam</a></li>
+                <li><a href="#">Sapiente</a></li>
+            </ul>
+        </nav>
+
+
+        <div class="uzivatel">
+            <a href="#"><img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-256.png" alt="" height="48"></a>
+            <a href="#" class="jmeno">User</a>
+        </div>
+    </header>
+</body>
+</html>

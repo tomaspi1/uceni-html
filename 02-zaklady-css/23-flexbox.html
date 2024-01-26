@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            background-color: grey;
+            font-size: 30px;
+            font-family: Arial;
+        }
+        header {
+            background-color: black;
+        }
+        header a {
+            color: white;
+        }
+        header a:hover {
+            color: orange;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        header .logo, header .uzivatel {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        header nav {
+            display: flex;
+        }
+        header nav ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+			gap:15px;
+			align-items: center;
+        }
+        header nav ul li {
+            border-top: 1px solid transparent;
+			list-style: none;
+			display:flex;
+        }
+        header nav ul li:hover {
+            border-top: 1px solid white;
+        }
+
+		header nav ul li a {
+			display:flex;
+			align-items: center;
+
+		}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#"><img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/star-256.png" alt="" height="128"></a>
+            <a href="#">Lorem.</a>
+        </div>
+
+
+        <nav>
+            <ul>
+                <li><a href="#">Lorem.</a></li>
+                <li><a href="#">Laboriosam.</a></li>
+                <li><a href="#">Sapiente?</a></li>
+                <li><a href="#">Aspernatur.</a></li>
+            </ul>
+        </nav>
+
+
+        <div class="uzivatel">
+            <a href="#"><img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-256.png" alt="" height="64"></a>
+            <a href="#">Lorem.</a>
+        </div>
+    </header>
+</body>
+</html>
